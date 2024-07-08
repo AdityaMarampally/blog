@@ -1,0 +1,65 @@
+site_name: Aditya Marampally
+site_url: https://adityamarampally.github.io/blog/
+
+#Repository
+repo_name: adityamarampally/blog
+repo_url: https://github.com/adityamarampally/blog
+edit_uri: ''
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: indigo
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: indigo
+      accent: lime
+
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/adityamarampally
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ajay_marampalli
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/adityamarampally
+  analytics:
+    provider: google
+    property: G-X9B33HWVL5
+
+markdown_extensions:
+  - toc:
+      permalink: false
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.table
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
+
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/adityamarampally"  target="_blank" rel="noopener">Aditya Marampally</a>
