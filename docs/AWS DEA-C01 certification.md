@@ -46,32 +46,20 @@ passing score is 720 from 50 questions along with 15 unscored questions.
         - XML, JSON, Email headers, log files
 
 ### Properties of Data
-1. Volume: Refers to the vast amount of data generated, stored, and processed. Big Data is characterized by large datasets that traditional systems can't handle.
-    - may range from gb's to petabytes or more
-    - Example: Social media platforms like Facebook generate billions of user interactions, comments, and posts daily.
-    - Scale: Petabytes (1 PB = 1,000 TB) or Exabytes (1 EB = 1,000 PB)
+| **Characteristic** | **Description**                                                                                         |
+|--------------------|---------------------------------------------------------------------------------------------------------|
+| **Volume**         | Refers to the vast amounts of data generated every second. Big data involves large volumes of data.     |
+| **Variety**        | Refers to the different types of data (structured, semi-structured, unstructured) from various sources. |
+| **Velocity**       | Refers to the speed at which data is generated, processed, and analyzed.                                |
+| **Veracity**       | Refers to the accuracy and trustworthiness of the data.                                                 |
+| **Value**          | Refers to the worth of the data being collected and how it can be turned into valuable insights.        |
+| **Variability**    | Refers to the inconsistency of the data, which can affect processes that handle and manage it.          |
 
-2. Velocity: Represents the high speed at which data is generated, processed, and analyzed. Big Data is often real-time or near-real-time.
-    - IoT sensor data, High freq trading systems
-    - Speed: Milliseconds, seconds, or minutes
-
-3. Variety: Indicates the diverse types of data structures, formats, and sources. Big Data includes structured, semi-structured, and unstructured data.
-    - Example: IoT devices generate diverse data types, such as temperature, location, and sensor readings.
-    - Types: Structured (e.g., databases), Semi-structured (e.g., XML), Unstructured (e.g., images)
-
-4. Veracity: Concerns the accuracy, quality, and trustworthiness of the data. Big Data often has inconsistencies, errors, and noise.
-    - Example: Sensor data from industrial equipment may be noisy or inaccurate due to hardware malfunctions.
-    - Quality: Accuracy, completeness, consistency, and reliability
-
-5. Value: Refers to the usefulness and relevance of the data in driving business decisions, insights, and outcomes.
-    - Example: Analyzing customer purchase history and behavior to offer personalized recommendations.
-    - Relevance: Business insights, decision-making, and revenue growth
-
-6. Vigilance: Emphasizes the need for constant monitoring, security, and governance to ensure data quality, privacy, and compliance.
-    - Example: Implementing robust security measures to protect sensitive customer data from cyber threats.
-    - Governance: Data privacy, security, compliance, and auditability
 
 ### data warehouse vs data lake vs data lakehouse 
+- Data Warehouse: Best for structured data and complex queries with strong data governance.
+- Data Lake: Best for storing vast amounts of diverse data for big data analytics and machine learning.
+- Data Lakehouse: Combines the benefits of both, providing a unified platform for diverse data types, with the performance and governance of data warehouses and the scalability and flexibility of data lakes.
 
 | Feature                    | Data Warehouse                                     | Data Lake                                           | Data Lakehouse                                      |
 |----------------------------|----------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------|
@@ -89,3 +77,14 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 | **Compliance**             | Easier to enforce compliance and security policies | Harder to enforce due to diverse data formats       | Enhanced compliance with unified security model     |
 | **Examples**               | Amazon Redshift, Google BigQuery, Snowflake        | Hadoop HDFS, Amazon S3, Azure Data Lake Storage     | Databricks Lakehouse, Snowflake, Amazon Redshift Spectrum |
 
+### Data Mesh
+It is a decentralized data architecture paradigm that addresses the challenges of scalability and ownership in modern data ecosystems by shifting from a centralized data lake or data warehouse approach to a distributed data mesh approach. It focuses on treating data as a product and emphasizes domain-oriented ownership.
+
+![alt text](data-mesh.png)
+
+### ETL/ ELT Pipelines
+- ETL, which stands for Extract, Transform, and Load, involves transforming data on a separate processing server before transferring it to the data warehouse.
+
+- ELT, on the other hand, or Extract, Load, and Transform, performs data transformations directly within the data warehouse itself. Unlike ETL, ELT allows for raw data to be sent directly to the data warehouse, eliminating the need for staging processes.
+![alt text](etl.png)
+![alt text](elt.png)
