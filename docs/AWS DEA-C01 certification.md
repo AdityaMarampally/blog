@@ -88,3 +88,51 @@ It is a decentralized data architecture paradigm that addresses the challenges o
 - ELT, on the other hand, or Extract, Load, and Transform, performs data transformations directly within the data warehouse itself. Unlike ETL, ELT allows for raw data to be sent directly to the data warehouse, eliminating the need for staging processes.
 ![alt text](etl.png)
 ![alt text](elt.png)
+
+### Data Sources
+- JDBC
+- ODBC
+- Raw Logs
+- API's
+- Streams
+
+#### Common Data Formats
+- CSV (structured) systems[RDS(sql based),R, ETL , pandas]
+- JSON (semi-structured) systems[Nosql, Restful APIs]
+- AVRO (Binary Format stores both data and schema) systems[Kafka, spark, flink, hadoop]
+- Parquet (columnar storage) systems[hadoop, spark, hive, impala, redshift spectrum]
+### Data Modelling, Data Lineage , Schema Evaluation
+More techniques add from Data Models
+- Star Schema
+
+
+### Data Optimization 
+More techniques add from Spark ,SQL  optimization
+- Indexing
+- Partition
+- Compression
+
+### Data Sampling Techniques
+- Random Sampling (just random)
+- Stratified Sampling (even representation from sample datasets)
+- systemic Sampling (impose systemic rule for entire dataset)
+### Data Skew Mechanisms
+- Data skew occurs when unequal distribution or imbalance of data across partitions or nodes in distributed clusters.
+- can be understand through "The celebrity Problem"
+- Causes:
+    - Non-uniform distribution of data
+    - Inedequate partitioning strategy
+    - Temporal Skew (eg.,recent dates have more data than old dates)
+- Techniques:
+    More techniques add from Spark ,SQL  optimization
+    - Adaptive partitioning
+    - Salting
+    - Sampling
+    - Repartioning
+    - Custom Partitioning
+### Data Validation and Profiling
+- Completeness
+- Consistency
+- Accuracy
+- Integrity
+
