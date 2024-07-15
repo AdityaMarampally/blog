@@ -10,4 +10,4 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 - Domain 2: Data Store Management (26% of scored content)
 - Domain 3: Data Operations and Support (22% of scored content)
 - Domain 4: Data Security and Governance (18% of scored content)
-[def]: https://d1.awsstatic.com/training-and-certification/docs-data-engineer-associate/AWS-Certified-Data-Engineer-Associate_Exam-Guide.pdf
+[comprehensive-list]https://d1.awsstatic.com/training-and-certification/docs-data-engineer-associate/AWS-Certified-Data-Engineer-Associate_Exam-Guide.pdf
