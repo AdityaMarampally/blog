@@ -11,7 +11,7 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 - Domain 3: Data Operations and Support (22% of scored content)
 - Domain 4: Data Security and Governance (18% of scored content)
 
-[comprehensive-list](https://d1.awsstatic.com/training-and-certification/docs-data-engineer-associate/AWS-Certified-Data-Engineer-Associate_Exam-Guide.pdf)
+[AWS-Certified-Data-Engineer-Associate_Exam-Guide](https://d1.awsstatic.com/training-and-certification/docs-data-engineer-associate/AWS-Certified-Data-Engineer-Associate_Exam-Guide.pdf)
 
 ## Data Engineering Fundamentals
 ### Types of Data
@@ -70,4 +70,22 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 6. Vigilance: Emphasizes the need for constant monitoring, security, and governance to ensure data quality, privacy, and compliance.
     - Example: Implementing robust security measures to protect sensitive customer data from cyber threats.
     - Governance: Data privacy, security, compliance, and auditability
+
+### data warehouse vs data lake vs data lakehouse 
+
+| Feature                    | Data Warehouse                                     | Data Lake                                           | Data Lakehouse                                      |
+|----------------------------|----------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------|
+| **Definition**             | Centralized repository for structured data         | Centralized repository for structured, semi-structured, and unstructured data | Unified platform combining features of data lakes and data warehouses |
+| **Data Type**              | Structured data                                    | Structured, semi-structured, and unstructured data  | Structured, semi-structured, and unstructured data  |
+| **Schema**                 | Schema-on-write                                    | Schema-on-read                                      | Supports both schema-on-write and schema-on-read    |
+| **Data Processing**        | Batch processing                                   | Batch and real-time processing                      | Batch and real-time processing                      |
+| **Storage Cost**           | Typically higher                                   | Typically lower                                     | Intermediate, leveraging cost-effective storage of data lakes and performance of warehouses |
+| **Performance**            | High performance for complex queries               | Variable performance depending on the workload      | High performance for complex queries                |
+| **Data Governance**        | Strong data governance and management              | Varies, can be less structured                      | Enhanced data governance combining both approaches  |
+| **Use Cases**              | Business intelligence, reporting, and data analysis| Big data analytics, machine learning, and data exploration | Business intelligence, advanced analytics, and machine learning |
+| **Accessibility**          | SQL-based tools and BI platforms                   | Diverse tools (e.g., Hadoop, Spark)                 | SQL-based tools, BI platforms, and big data tools   |
+| **Scalability**            | Scalable but may require more resources to scale   | Highly scalable with distributed storage systems    | Highly scalable leveraging both distributed storage and computing |
+| **Data Update**            | Handles updates and transactions efficiently       | Less efficient at handling updates and transactions | Efficient handling of updates and transactions      |
+| **Compliance**             | Easier to enforce compliance and security policies | Harder to enforce due to diverse data formats       | Enhanced compliance with unified security model     |
+| **Examples**               | Amazon Redshift, Google BigQuery, Snowflake        | Hadoop HDFS, Amazon S3, Azure Data Lake Storage     | Databricks Lakehouse, Snowflake, Amazon Redshift Spectrum |
 
