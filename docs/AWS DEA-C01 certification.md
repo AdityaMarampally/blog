@@ -16,34 +16,34 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 ## Data Engineering Fundamentals
 ### Types of Data
 
-1. Structured Data 
-- Data is organized in defined manner(rows and columns of well defined data) or schema found in RDS.
-- Characteristics:
-   - Easily queryable
-   - Organized in rows and columns
-   - Has a consistent structure
-- Examples:
-   - CSV with consistent columns
-   - RDS Database tables(MySQL, Oracle, Postgres SQL)
-   - Excel Spreadsheets
-2. UnStructured Data 
-- Data is does not have a predifined structured or schema.
-- Characteristics:
-   - Not Easy to query
-   - comes without preprocessing
-   - May come in various formats
-- Examples:
-   - Text files without a fixed format(log files, emails,config files), Videos , Audios, Images
-   - Need indexing to extract information
-3. Semi-Structured Data 
-- Data is not as organized or structured but does have some structure in form of tags,patterns,hierarchies.
-- Structure is in there  
-- Characteristics:
-   - Elements might be tagged or categorized in some way
-   - More flexible that Structured Data and less chaotic than UnStructured data
-   - May come in various formats
-- Examples:
-   - XML, JSON, Email headers, log files
+### **Structured Data**
+Data is organized in a defined manner (rows and columns of well-defined data) or schema found in RDS.
+#### **Characteristics:**
+    Easily queryable
+    Organized in rows and columns
+    Has a consistent structure
+#### **Examples:**
+    CSV with consistent columns
+    RDS Database tables(MySQL, Oracle, Postgres SQL)
+    Excel Spreadsheets
+
+### **UnStructured Data** 
+Data is does not have a predifined structured or schema.
+#### **Characteristics:**
+    Not Easy to query
+    comes without preprocessing
+    May come in various formats
+#### **Examples:**
+    Text files without a fixed format(log files, emails,config files), Videos , Audios, Images
+    Need indexing to extract information
+### **Semi-Structured Data** 
+Data is not as organized or structured but does have some structure in form of tags,patterns,hierarchies. Structure is in there but not consistent throughout the data  
+#### **Characteristics:**
+    Elements might be tagged or categorized in some way
+    More flexible that Structured Data and less chaotic than UnStructured data
+    May come in various formats
+#### **Examples:**
+    XML, JSON, Email headers, log files
 
 ### Properties of Data
 | **Characteristic** | **Description**                                                                                         |
@@ -82,10 +82,10 @@ It is a decentralized data architecture paradigm that addresses the challenges o
 
 ![alt text](data-mesh.png)
 
-### ETL/ ELT Pipelines
-- ETL, which stands for Extract, Transform, and Load, involves transforming data on a separate processing server before transferring it to the data warehouse.
+### **ETL/ ELT** Pipelines
+- **ETL**, which stands for Extract, Transform, and Load, involves transforming data on a separate processing server before transferring it to the data warehouse.
 
-- ELT, on the other hand, or Extract, Load, and Transform, performs data transformations directly within the data warehouse itself. Unlike ETL, ELT allows for raw data to be sent directly to the data warehouse, eliminating the need for staging processes.
+- **ELT**, on the other hand, or Extract, Load, and Transform, performs data transformations directly within the data warehouse itself. Unlike ETL, ELT allows for raw data to be sent directly to the data warehouse, eliminating the need for staging processes.
 ![alt text](etl.png)
 ![alt text](elt.png)
 
@@ -109,20 +109,20 @@ More techniques add from Data Models
 - Snowflake Schema(extension of star schema adds sub-dimensions for dimension tables creates less normalization but easy for analysts to query)
 - Data Vault(Satillete, hubs, links)
 
-- **One Big Table**
+#### **One Big Table**
 1. Concept: Combines all data into a single, wide table.
 2. Pros: Simple design, easy to query.
 3. Cons: Poor performance on large datasets, difficult to maintain and scale, high redundancy.
 
-- **Kimball**
+#### **Kimball**
 1. oncept: Uses a star schema with fact and dimension tables.
 2. Pros: Optimized for read performance, suitable for OLAP systems, relatively easy to understand and use.
 3. Cons: Some redundancy, more difficult to maintain data integrity compared to normalized models.
-- Inmon
+#### Inmon
 1. Concept: Uses a normalized 3NF data model.
 2. Pros: High data integrity, reduced redundancy, suitable for OLTP systems.
 3. Cons: Complex queries, can be slower due to multiple joins, requires careful design and management.
-- Data Vault
+#### Data Vault
 1. Concept: Uses a hybrid approach with hubs (unique business keys), links (relationships), and satellites (contextual data).
 2. Pros: Highly scalable, flexible, supports historical data tracking, good for complex data integration.
 3. Cons: Requires understanding of Data Vault methodology, can be complex to implement and manage.
