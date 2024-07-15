@@ -17,33 +17,33 @@ passing score is 720 from 50 questions along with 15 unscored questions.
 ### Types of Data
 
 1. Structured Data 
-   - Data is organized in defined manner(rows and columns of well defined data) or schema found in RDS.
-   - Characteristics:
-       - Easily queryable
-       - Organized in rows and columns
-       - Has a consistent structure
-   - Examples:
-       - CSV with consistent columns
-       - RDS Database tables(MySQL, Oracle, Postgres SQL)
-       - Excel Spreadsheets
+- Data is organized in defined manner(rows and columns of well defined data) or schema found in RDS.
+- Characteristics:
+   - Easily queryable
+   - Organized in rows and columns
+   - Has a consistent structure
+- Examples:
+   - CSV with consistent columns
+   - RDS Database tables(MySQL, Oracle, Postgres SQL)
+   - Excel Spreadsheets
 2. UnStructured Data 
-   - Data is does not have a predifined structured or schema.
-   - Characteristics:
-       - Not Easy to query
-       - comes without preprocessing
-       - May come in various formats
-   - Examples:
-       - Text files without a fixed format(log files, emails,config files), Videos , Audios, Images
-       - Need indexing to extract information
+- Data is does not have a predifined structured or schema.
+- Characteristics:
+   - Not Easy to query
+   - comes without preprocessing
+   - May come in various formats
+- Examples:
+   - Text files without a fixed format(log files, emails,config files), Videos , Audios, Images
+   - Need indexing to extract information
 3. Semi-Structured Data 
-   - Data is not as organized or structured but does have some structure in form of tags,patterns,hierarchies.
-   - Structure is in there  
-   - Characteristics:
-       - Elements might be tagged or categorized in some way
-       - More flexible that Structured Data and less chaotic than UnStructured data
-       - May come in various formats
-   - Examples:
-       - XML, JSON, Email headers, log files
+- Data is not as organized or structured but does have some structure in form of tags,patterns,hierarchies.
+- Structure is in there  
+- Characteristics:
+   - Elements might be tagged or categorized in some way
+   - More flexible that Structured Data and less chaotic than UnStructured data
+   - May come in various formats
+- Examples:
+   - XML, JSON, Email headers, log files
 
 ### Properties of Data
 | **Characteristic** | **Description**                                                                                         |
@@ -109,11 +109,12 @@ More techniques add from Data Models
 - Snowflake Schema(extension of star schema adds sub-dimensions for dimension tables creates less normalization but easy for analysts to query)
 - Data Vault(Satillete, hubs, links)
 
-- One Big Table
+- **One Big Table**
 1. Concept: Combines all data into a single, wide table.
 2. Pros: Simple design, easy to query.
 3. Cons: Poor performance on large datasets, difficult to maintain and scale, high redundancy.
-- Kimball
+
+- **Kimball**
 1. oncept: Uses a star schema with fact and dimension tables.
 2. Pros: Optimized for read performance, suitable for OLAP systems, relatively easy to understand and use.
 3. Cons: Some redundancy, more difficult to maintain data integrity compared to normalized models.
@@ -157,11 +158,11 @@ Best Practices for Schema Evaluation
 
 ### Data Optimization Techniques
 
-### Data Optimization Overview
+#### Data Optimization Overview
 
 **Data Optimization** refers to the processes and techniques used to improve the performance and efficiency of data systems, including storage, retrieval, and processing. This ensures that data operations are fast, cost-effective, and scalable.
 
-### Key Optimization Techniques
+#### Key Optimization Techniques
 
 1. **Indexing**: Creating indexes on columns to speed up data retrieval operations.
 2. **Partitioning**: Dividing large tables into smaller, more manageable pieces to improve query performance and manageability.
@@ -172,7 +173,7 @@ Best Practices for Schema Evaluation
 7. **Data Archiving**: Moving infrequently accessed data to cheaper, long-term storage solutions.
 8. **Data Cleaning**: Removing errors and inconsistencies to improve data quality and processing efficiency.
 
-### AWS Services for Data Optimization
+#### AWS Services for Data Optimization
 
 1. **Amazon Redshift**:
   - **Distribution Styles**: Choose the right distribution key to optimize data distribution and query performance.
@@ -208,7 +209,7 @@ Best Practices for Schema Evaluation
   - **Compression**: Store data in compressed formats (e.g., Parquet, ORC) to reduce scan times and costs.
   - **Presto Optimizations**: Utilize Presto-specific optimizations for query performance.
 
-### Best Practices for Data Optimization
+#### Best Practices for Data Optimization
 
 - **Understand Workload Patterns**: Analyze access patterns and workload characteristics to choose the right optimization techniques.
 - **Monitor Performance**: Continuously monitor system performance using tools like Amazon CloudWatch, AWS CloudTrail, and service-specific monitoring tools.
@@ -224,13 +225,13 @@ Best Practices for Schema Evaluation
 - Stratified Sampling (even representation from sample datasets)
 - systemic Sampling (impose systemic rule for entire dataset)
 ### Data Skew Mechanisms
-- Data skew occurs when unequal distribution or imbalance of data across partitions or nodes in distributed clusters.
-- can be understand through "The celebrity Problem"
-- Causes:
+1. Data skew occurs when unequal distribution or imbalance of data across partitions or nodes in distributed clusters.
+1. can be understand through "The celebrity Problem"
+1. Causes:
    - Non-uniform distribution of data
    - Inedequate partitioning strategy
    - Temporal Skew (eg.,recent dates have more data than old dates)
-- Techniques:
+1. Techniques:
     More techniques add from Spark ,SQL  optimization
    - Adaptive partitioning
    - Salting
