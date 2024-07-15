@@ -101,6 +101,7 @@ It is a decentralized data architecture paradigm that addresses the challenges o
 - JSON (semi-structured) systems[Nosql, Restful APIs]
 - AVRO (Binary Format stores both data and schema) systems[Kafka, spark, flink, hadoop]
 - Parquet (columnar storage) systems[hadoop, spark, hive, impala, redshift spectrum]
+
 ### Data Modeling
 More techniques add from Data Models
 - Star Schema (Fact table, dimension tables)
